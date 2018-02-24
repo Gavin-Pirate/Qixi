@@ -1,2 +1,2 @@
-# animation-case
-Record some animation cases.
+# Qixi festival animation
+
