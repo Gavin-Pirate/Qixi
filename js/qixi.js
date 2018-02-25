@@ -29,7 +29,7 @@ var qiXi=function(){
             walkOutShop: 1500,
             openDoorTime: 800,
             shutDoorTime: 500,
-            waitRotate: 1650
+            waitRotate: 1800
         },
         //花瓣链接数组
         snowflakeURl: ["img/snow1.png", 
