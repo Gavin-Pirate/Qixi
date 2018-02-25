@@ -23,13 +23,13 @@ var qiXi=function(){
             walkToThird: 6000,
             walkToMiddle: 6500,
             walkToEnd: 6500,
-            walkTobridge: 1500,
-            bridgeWalk: 2000,
+            walkTobridge: 1200,
+            bridgeWalk: 1800,
             walkToShop: 1500,
             walkOutShop: 1500,
             openDoorTime: 800,
             shutDoorTime: 500,
-            waitRotate: 1800
+            waitRotate: 1650
         },
         //花瓣链接数组
         snowflakeURl: ["img/snow1.png", 
@@ -298,7 +298,7 @@ var BoyToShop = function(boyObj) {
     			var boy=document.getElementById('boy');
     			boy.classList.add('slowFlowerWalk');
     			resolve();
-    		},1000)
+    		},1500)
     	});
     	return p1;
     }
