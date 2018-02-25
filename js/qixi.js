@@ -15,8 +15,8 @@ var qiXi=function(){
     	//音乐参数
         audio: {
 	        enable: true, // 是否开启音乐
-	        playURl:'music/happy.wav', // 正常播放地址
-	        cycleURL: 'music/circulation.wav' // 正常循环播放地址
+	        audio1:document.getElementById('audio1'), // 正常播放地址
+	        audio2:document.getElementById('audio2') // 正常循环播放地址
         },
         //时间控制
         setTime: {
@@ -61,9 +61,9 @@ var qiXi=function(){
 		return data.top;
 	}();
     if (confi.audio.enable) {
-        var audio1 = Html5Audio(confi.audio.playURl);
+        var audio1 = Html5Audio(confi.audio.audio1);
         audio1.end(function() {
-            Html5Audio(confi.audio.cycleURL, true)
+            Html5Audio(confi.audio.audio2)
         })
     }
     var swipe = Swipe(container);
@@ -375,10 +375,8 @@ function snowflake(){
         },10000)
        	},100);
 	}
-	function Html5Audio(url, isloop) {
-		var audio=new Audio(url);
-		audio.autoplay=true;
-		audio.loop=isloop||false;
+	function Html5Audio(audioobj) {
+		var audio=audioobj;
 		audio.play();
 		return{
 			end:function(callback){
